@@ -1,24 +1,37 @@
 .nav {
     grid-column: 1 / -1;
     background-color: white;    
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: auto repeat(2, minmax(min-content, 60rem)) auto;
     font-size: 1.8rem;
+    align-content: center;
+    align-items: center;
 
     &__list {
         list-style: none;
         display: flex;
+        grid-column: 3 / 4;
+        justify-self: end;
+        padding-right: 3rem;
     }
 
     &__item a {
         color: black;
         text-decoration: none;
-        margin-right: 2rem;
+        //margin-right: 2rem;
+        margin-left: 2rem;
+
+        /*  */
     }
 }
 
 .logo {
     height: 5rem;
-    margin-left: 2rem;
+    //margin-left: 2rem;
+    /*  */
+    grid-column: 2 / 3;
+    padding-left: 3rem;
 }
