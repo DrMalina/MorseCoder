@@ -1,0 +1,26 @@
+$font-primary: 'Josefin Sans', sans-serif;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 6.4rem calc(100vh - 6.4rem);
+}

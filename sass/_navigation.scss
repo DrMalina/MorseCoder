@@ -1,0 +1,29 @@
+.nav {
+    grid-column: 1 / -1;
+    background-color: white;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__item a {
+        color: black;
+        text-decoration: none;
+        margin-right: 2rem;
+    }
+
+    /* .page-title {
+        margin-left: 2rem;
+    } */
+}
+
+.logo {
+    height: 5rem;
+    margin-left: 2rem;
+}
