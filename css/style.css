@@ -10,7 +10,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -18,16 +18,20 @@ body {
   display: grid;
   grid-template-rows: 6.4rem calc(100vh - 6.4rem); }
 
+.wrapper {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
 .nav {
   grid-column: 1 / -1;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 2rem;
-  /* .page-title {
-        margin-left: 2rem;
-    } */ }
+  font-size: 1.8rem; }
   .nav__list {
     list-style: none;
     display: flex; }
@@ -46,7 +50,37 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  /* font-family: $font-primary; */ }
+
+.about {
+  display: flex;
+  flex-direction: column; }
+  .about__heading {
+    font-size: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+  .about__content {
+    margin-left: 3rem;
+    margin-right: 3rem; }
+    .about__content p {
+      font-size: 1.8rem;
+      margin-top: 2rem; }
+    .about__content .heading-4 {
+      font-size: 2.2rem; }
+  .about__fig {
+    margin: 3rem auto; }
+    .about__fig img {
+      width: 50rem; }
+    .about__fig figcaption {
+      font-size: 1.6rem;
+      font-style: italic;
+      text-align: center; }
+
+.source {
+  text-decoration: none;
+  color: #1d6cd4;
+  font-size: 1.6rem; }
 
 .heading-1 {
   font-size: 9rem;
@@ -55,6 +89,10 @@ body {
 .heading-2 {
   font-size: 5rem;
   font-weight: 300; }
+
+.heading-3 {
+  text-align: center;
+  text-transform: none; }
 
 .btn {
   font-size: 3rem;

@@ -1,11 +1,10 @@
 .nav {
     grid-column: 1 / -1;
-    background-color: white;
-    
+    background-color: white;    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     &__list {
         list-style: none;
@@ -17,10 +16,6 @@
         text-decoration: none;
         margin-right: 2rem;
     }
-
-    /* .page-title {
-        margin-left: 2rem;
-    } */
 }
 
 .logo {

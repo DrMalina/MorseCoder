@@ -1,0 +1,44 @@
+.about {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+        font-size: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__content {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        p {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+    
+        }
+
+        .heading-4 {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__fig {
+        margin: 3rem auto;
+
+        img {
+            width: 50rem;
+        }
+
+        figcaption {
+            font-size: 1.6rem;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
+
+.source {
+    text-decoration: none;
+    color: #1d6cd4;
+    font-size: 1.6rem;
+}

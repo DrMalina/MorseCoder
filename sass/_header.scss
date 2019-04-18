@@ -6,27 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.heading-1 {
-    font-size: 9rem;
-    font-weight: 400;
-    //margin-left: 3rem;
-}
-
-.heading-2 {
-    font-size: 5rem;
-    font-weight: 300;
-   // margin-left: 3rem;
-}
-
-.btn {
-    font-size: 3rem;
-    margin-top: 5rem;
-    cursor: pointer;
-
-    &--header {
-        border: .5rem solid white;
-        padding: 2rem 4rem;
-    }
+    /* font-family: $font-primary; */
 }
