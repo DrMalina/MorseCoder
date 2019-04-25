@@ -24,12 +24,14 @@ body {
 .container {
     display: grid;
     grid-template-rows: 6.4rem calc(100vh - 6.4rem);
+    grid-template-columns: auto [start] repeat(2, minmax(min-content, 60rem)) [end] auto;
 }
 
 .wrapper {
-    max-width: 120rem;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+.main {
+    grid-column: start / end;
 }

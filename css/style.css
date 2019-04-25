@@ -16,14 +16,15 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 6.4rem calc(100vh - 6.4rem); }
+  grid-template-rows: 6.4rem calc(100vh - 6.4rem);
+  grid-template-columns: auto [start] repeat(2, minmax(min-content, 60rem)) [end] auto; }
 
 .wrapper {
-  max-width: 120rem;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 3rem;
   padding-right: 3rem; }
+
+.main {
+  grid-column: start / end; }
 
 .nav {
   grid-column: 1 / -1;
@@ -41,7 +42,7 @@ body {
     display: flex;
     grid-column: 3 / 4;
     justify-self: end;
-    padding-right: 3rem; }
+    padding-right: 2.5rem; }
   .nav__item a {
     color: black;
     text-decoration: none;
@@ -52,22 +53,24 @@ body {
   height: 5rem;
   /*  */
   grid-column: 2 / 3;
-  padding-left: 3rem; }
+  padding-left: 2.5rem; }
 
 .header {
   background-color: black;
   color: white;
   display: grid;
   justify-items: center;
-  align-content: center; }
+  align-content: center;
+  grid-column: 1 / -1; }
 
 .about {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  /* grid-column: start / end; */ }
   .about__heading {
-    font-size: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem; }
+    /* font-size: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem; */ }
   .about__content {
     margin-left: 3rem;
     margin-right: 3rem; }
@@ -77,22 +80,89 @@ body {
     .about__content .heading-4 {
       font-size: 2.2rem; }
   .about__fig {
-    margin-top: 3rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .about__fig img {
+    .about__fig--img img {
       max-width: 100%;
       height: auto; }
-    .about__fig figcaption {
+    .about__fig--img figcaption {
       font-size: 1.6rem;
       font-style: italic;
       text-align: center; }
+    .about__fig--video {
+      margin-top: 10rem;
+      position: relative;
+      padding-top: 56.25%; }
+      .about__fig--video iframe {
+        position: absolute;
+        top: 0;
+        width: 80%;
+        height: 80%;
+        border: 0; }
+      .about__fig--video figcaption {
+        position: absolute;
+        top: -6rem;
+        z-index: 99;
+        font-size: 1.8rem; }
 
 .source {
   text-decoration: none;
   color: #1d6cd4;
-  font-size: 1.6rem; }
+  font-size: inherit; }
+
+.alphabet {
+  display: grid; }
+  .alphabet__info {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3rem; }
+  .alphabet__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(13, min-content);
+    grid-auto-flow: column;
+    align-items: center;
+    margin: 2rem auto;
+    list-style: none;
+    border: 3px solid black; }
+    .alphabet__list > li {
+      font-size: 1.6rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-weight: 700; }
+      .alphabet__list > li span {
+        font-size: 2em;
+        margin-left: 2rem;
+        font-weight: 700; }
+    .alphabet__list li:nth-child(14) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(15) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(16) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(17) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(18) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(19) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(20) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(21) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(22) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(23) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(24) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(25) {
+      border-right: 2px solid black; }
+    .alphabet__list li:nth-child(26) {
+      border-right: 2px solid black; }
 
 .heading-1 {
   font-size: 9rem;
@@ -104,7 +174,10 @@ body {
 
 .heading-3 {
   text-align: center;
-  text-transform: none; }
+  text-transform: none;
+  font-size: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .btn {
   font-size: 3rem;

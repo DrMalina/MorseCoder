@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">        
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Roboto:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Roboto:300,400,700" rel="stylesheet">
         <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/morseCodeIcon.png">        
@@ -14,9 +14,6 @@
         <nav class="nav">
             <img class="logo" alt="Page logo" src="img/morseCodeIcon.png">
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#">Home</a>
-                </li>
                 <li class="nav__item">
                     <a href="#">About</a>
                 </li>
@@ -28,34 +25,88 @@
                 </li>
             </ul>
         </nav>
-        <header class="header">
+        <header class="header wrapper">
             <h1 class="heading-1">Morse Coder</h1>
-            <h2 class="heading-2">Learn about the famous code</h2>
+            <h2 class="heading-2">Learn about the famous dots and dashes</h2>
             <a class="btn btn--header">See more &darr;</a>
         </header>
-        <section class="about wrapper">
-            <h3 class="about__heading heading-3">about</h3>
-            <div class="about__content">
-                <h4 class="heading-4">What is Morse Code?</h4>
-                <p>
-                    Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal durations called dots and dashes or dits and dahs. It is named after Samuel F. B. Morse, an inventor of the telegraph.
-                </p>
-                <p>
-                    The International Morse Code encodes the 26 English letters A through Z, some non-English letters, the Arabic numerals and a small set of punctuation and procedural signals (prosigns). There is no distinction between upper and lower case letters. Each Morse code symbol is formed by a sequence of dots and dashes. The dot duration is the basic unit of time measurement in Morse code transmission. The duration of a dash is three times the duration of a dot. Each dot or dash within a character is followed by period of signal absence, called a space, equal to the dot duration. The letters of a word are separated by a space of duration equal to three dots, and the words are separated by a space equal to seven dots. To increase the efficiency of encoding, Morse code was designed so that the length of each symbol is approximately inverse to the frequency of occurrence in text of the English language character that it represents. Thus the most common letter in English, the letter "E", has the shortest code: a single dot. Because the Morse code elements are specified by proportion rather than specific time durations, the code is usually transmitted at the highest rate that the receiver is capable of decoding. The Morse code transmission rate (speed) is specified in groups per minute, commonly referred to as words per minute.
-                </p>
-                <p>
-                    Morse code is usually transmitted by on-off keying of an information carrying medium such as electric current, radio waves, visible light or sound waves. The current or wave is present during time period of the dot or dash and absent during the time between dots and dashes.
-                </p>
-                <p>
-                    Morse code can be memorized, and Morse code signalling in a form perceptible to the human senses, such as sound waves or visible light, can be directly interpreted by persons trained in the skil. 
-                    <a href="https://en.wikipedia.org/wiki/Morse_code" class="source"> [Source]</a>
-                </p>
-            </div>
-            <figure class="about__fig">
-                <img src="img/morse-telegraph-1837-granger.jpg" alt="Drawing of a Morse Telegraph from 1837">
-                <figcaption> Morse Telegraph (1837) photograph by <a href="https://pixels.com/featured/morse-telegraph-1837-granger.html" class="source">Granger</a></figcaption> 
-            </figure>
-        </section>
+        <main class="main wrapper">
+            <section class="about">
+                <h3 class="about__heading heading-3">about</h3>
+                <div class="about__content">
+                    <h4 class="heading-4">What is Morse Code?</h4>
+                    <p>
+                        Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal durations called dots and dashes or dits and dahs. It is named after Samuel F. B. Morse, an inventor of the telegraph.
+                    </p>
+                    <p>
+                        The International Morse Code encodes the 26 English letters A through Z, some non-English letters, the Arabic numerals and a small set of punctuation and procedural signals (prosigns). There is no distinction between upper and lower case letters. Each Morse code symbol is formed by a sequence of dots and dashes. The dot duration is the basic unit of time measurement in Morse code transmission. The duration of a dash is three times the duration of a dot. Each dot or dash within a character is followed by period of signal absence, called a space, equal to the dot duration. The letters of a word are separated by a space of duration equal to three dots, and the words are separated by a space equal to seven dots. To increase the efficiency of encoding, Morse code was designed so that the length of each symbol is approximately inverse to the frequency of occurrence in text of the English language character that it represents. Thus the most common letter in English, the letter "E", has the shortest code: a single dot. Because the Morse code elements are specified by proportion rather than specific time durations, the code is usually transmitted at the highest rate that the receiver is capable of decoding. The Morse code transmission rate (speed) is specified in groups per minute, commonly referred to as words per minute.
+                    </p>
+                    <p>
+                        Morse code is usually transmitted by on-off keying of an information carrying medium such as electric current, radio waves, visible light or sound waves. The current or wave is present during time period of the dot or dash and absent during the time between dots and dashes.
+                    </p>
+                    <p>
+                        Morse code can be memorized, and Morse code signalling in a form perceptible to the human senses, such as sound waves or visible light, can be directly interpreted by persons trained in the skil. 
+                        <a href="https://en.wikipedia.org/wiki/Morse_code" class="source"> [Source]</a>
+                    </p>
+                </div>
+                <figure class="about__fig about__fig--img">
+                    <img src="img/morse-telegraph-1837-granger.jpg" alt="">
+                    <figcaption> Morse Telegraph (1837) photograph by <a href="https://pixels.com/featured/morse-telegraph-1837-granger.html" class="source">Granger</a></figcaption> 
+                </figure>
+                <figure class="about__fig about__fig--video">
+                    <iframe src="https://www.youtube.com/embed/HY_OIwideLg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>Check out video below, where Michael from <a href="https://www.youtube.com/user/Vsauce" class="source">VSauce</a> talks about Morse Code in more detail.</figcaption>
+                </figure>
+            </section>
+            <section class="alphabet wrapper">
+                <h3 class="alphabet__heading heading-3">International morse code alphabet</h3>
+                <ol class="alphabet__info">
+                    <li>The length of dot is one unit.</li>
+                    <li>A dash is three units.</li>
+                    <li>The space between parts of the same letter is one unit.</li>
+                    <li>The space between letters is three units.</li>
+                    <li>The space between words is seven units.</li>
+                </ol>
+                <ul class="alphabet__list">
+                    <li>A:<span>.-</span></li>
+                    <li>B:<span>-...</span></li>
+                    <li>C:<span>-.-.</span></li>
+                    <li>D:<span>-..</span></li>
+                    <li>E:<span>.</span></li>
+                    <li>F:<span>..-.</span></li>
+                    <li>G:<span>--.</span></li>
+                    <li>H:<span>....</span></li>
+                    <li>I:<span>..</span></li>
+                    <li>J:<span>.---</span></li>
+                    <li>K:<span>-.-</span></li>
+                    <li>L:<span>.-..</span></li>
+                    <li>M:<span>--</span></li>
+                    <li>N:<span>-.</span></li>
+                    <li>O:<span>---</span></li>
+                    <li>P:<span>.--.</span></li>
+                    <li>Q:<span>--.-</span></li>
+                    <li>R:<span>.-.</span></li>
+                    <li>S:<span>...</span></li>
+                    <li>T:<span>-</span></li>
+                    <li>U:<span>..-</span></li>
+                    <li>V:<span>...-</span></li>
+                    <li>W:<span>.--</span></li>
+                    <li>X:<span>-..-</span></li>
+                    <li>Y:<span>-.--</span></li>
+                    <li>Z:<span>--..</span></li>
+                    <li>1:<span>.----</span></li>
+                    <li>2:<span>..---</span></li>
+                    <li>3:<span>...--</span></li>
+                    <li>4:<span>....-</span></li>
+                    <li>5:<span>.....</span></li>
+                    <li>6:<span>-....</span></li>
+                    <li>7:<span>--...</span></li>
+                    <li>8:<span>---..</span></li>
+                    <li>9:<span>----.</span></li>
+                    <li>0:<span>-----</span></li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
 
