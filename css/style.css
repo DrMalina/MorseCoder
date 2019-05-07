@@ -164,6 +164,20 @@ body {
     .alphabet__list li:nth-child(26) {
       border-right: 2px solid black; }
 
+.converter__fieldset {
+  display: grid;
+  padding: 1.25rem; }
+  .converter__fieldset legend {
+    font-weight: 700;
+    font-size: 1.6rem; }
+  .converter__fieldset label, .converter__fieldset span {
+    font-size: 1.4rem; }
+  .converter__fieldset textarea {
+    padding: .5rem;
+    margin-bottom: 1rem; }
+  .converter__fieldset span {
+    text-align: right; }
+
 .heading-1 {
   font-size: 9rem;
   font-weight: 400; }

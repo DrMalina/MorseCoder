@@ -1,0 +1,28 @@
+.converter {
+    
+    &__form {
+    }
+
+    &__fieldset {
+        display: grid;
+        padding: 1.25rem;
+
+        legend {
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        label, span {
+            font-size: 1.4rem;
+        }
+
+        textarea {
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        span {
+            text-align: right;
+        }
+    }
+}
