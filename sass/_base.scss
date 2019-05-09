@@ -30,8 +30,16 @@ body {
 .wrapper {
     padding-left: 3rem;
     padding-right: 3rem;
+    //
+    /* padding-left: .5rem;
+    padding-right: .5rem; */
 }
 
 .main {
     grid-column: start / end;
+    //display: none; //!
+}
+
+.limit {
+    color: red; 
 }

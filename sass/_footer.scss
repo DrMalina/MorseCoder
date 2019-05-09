@@ -1,0 +1,16 @@
+.footer {
+    grid-column: 1 / -1;
+    padding: 8rem;
+    background-color: #222; 
+    text-align: center;
+
+    p {
+        color: white;
+        font-size: 1.6rem;
+    }
+
+    &__author {
+        color: #83d0f2;
+        text-decoration: none;
+    }
+}

@@ -27,12 +27,12 @@
         </nav>
         <header class="header wrapper">
             <h1 class="heading-1">Morse Coder</h1>
-            <h2 class="heading-2">Learn about the famous dots and dashes</h2>
+            <h2 class="heading-2">Famous dots and dashes 101</h2>
             <a class="btn btn--header">See more &darr;</a>
         </header>
         <main class="main wrapper">
             <section class="about">
-                <h3 class="about__heading heading-3">about</h3>
+                <h3 class="about__heading heading-3">About</h3>
                 <div class="about__content">
                     <h4 class="heading-4">What is Morse Code?</h4>
                     <p>
@@ -45,7 +45,7 @@
                         Morse code is usually transmitted by on-off keying of an information carrying medium such as electric current, radio waves, visible light or sound waves. The current or wave is present during time period of the dot or dash and absent during the time between dots and dashes.
                     </p>
                     <p>
-                        Morse code can be memorized, and Morse code signalling in a form perceptible to the human senses, such as sound waves or visible light, can be directly interpreted by persons trained in the skil. 
+                        Morse code can be memorized, and Morse code signalling in a form perceptible to the human senses, such as sound waves or visible light, can be directly interpreted by persons trained in the skill. 
                         <a href="https://en.wikipedia.org/wiki/Morse_code" class="source"> [Source]</a>
                     </p>
                 </div>
@@ -112,14 +112,24 @@
                     <fieldset class="converter__fieldset">
                         <legend>Encode Your Message</legend>
                         <label for="input">Input:</label>
-                        <textarea name="input" id="input" placeholder="Put your message here" cols="30" rows="10"></textarea>
-                        <span>Characters left: 60</span>
+                        <textarea name="input" id="input" placeholder="Put your message here - English letters A through Z or Arabic numerals from 0 to 9" cols="30" rows="6"></textarea>
+                        <p>Characters left: <span class="characters-value" id="char-value"></span></p>
                         <label for="output">Output:</label>
-                        <textarea name="output" id="output" cols="30" rows="10" readonly=""></textarea>
+                        <textarea name="output" id="output" cols="30" rows="6" readonly=""></textarea>
+                        <div class="converter__buttons">
+                            <button class="btn btn--play" id="play">&#x25b6;</button>
+                            <button class="btn btn--stop" id="stop">&#x25a0;</button>
+                        </div>
                     </fieldset>
                 </form>
             </section>
         </main>
+
+        <footer class="footer">
+            <p>&copy; 2019 <a href="https://github.com/DrMalina" class="footer__author">Maciej Malinowski</a></p>
+        </footer>
+
+        <script src="js/app.js"></script>    
     </body>
 </html>
 

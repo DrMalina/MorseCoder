@@ -1,12 +1,13 @@
 .heading-1 {
-    font-size: 9rem;
+    font-size: inherit;
     font-weight: 400;
     //margin-left: 3rem;
 }
 
 .heading-2 {
-    font-size: 5rem;
+    font-size: .5em;
     font-weight: 300;
+    font-style: italic;
    // margin-left: 3rem;
 }
 
@@ -17,15 +18,34 @@
     font-size: 4rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    //
+    
 }
 
 .btn {
-    font-size: 3rem;
-    margin-top: 5rem;
     cursor: pointer;
+    border: none;
 
     &--header {
         border: .5rem solid white;
         padding: 2rem 4rem;
+        font-size: .375em;
+        margin-top: 5rem;
+    }
+
+    &--play, &--stop {
+        padding: 2rem 4rem;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: white;
+        background-color: #222;
+        margin-right: .8rem;
+
+    }
+
+    &--play:hover,
+    &--stop:hover {
+        //background-color: rgb(61, 60, 60);
+        background-color: rgb(61, 60, 60);
     }
 }

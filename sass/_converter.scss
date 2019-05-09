@@ -1,4 +1,5 @@
 .converter {
+    margin-bottom: 4rem;
     
     &__form {
     }
@@ -10,19 +11,21 @@
         legend {
             font-weight: 700;
             font-size: 1.6rem;
-        }
+        } 
 
-        label, span {
+        label, p {
             font-size: 1.4rem;
         }
 
         textarea {
             padding: .5rem;
             margin-bottom: 1rem;
+            width: 100%;
         }
 
-        span {
+        p {
             text-align: right;
+            color: #696969;
         }
     }
 }
