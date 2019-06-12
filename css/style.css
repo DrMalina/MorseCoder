@@ -229,12 +229,12 @@ body {
     padding: 2rem 4rem;
     font-size: .375em;
     margin-top: 5rem; }
-  .btn--play, .btn--stop {
+  .btn--play, .btn--stop, .btn--converter {
     padding: 2rem 4rem;
     font-size: 2rem;
     line-height: 2rem;
     color: white;
     background-color: #222;
     margin-right: .8rem; }
-  .btn--play:hover, .btn--stop:hover {
+  .btn--play:hover, .btn--stop:hover, .btn--converter:hover {
     background-color: #3d3c3c; }

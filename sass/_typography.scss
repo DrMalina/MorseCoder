@@ -33,7 +33,7 @@
         margin-top: 5rem;
     }
 
-    &--play, &--stop {
+    &--play, &--stop, &--converter {
         padding: 2rem 4rem;
         font-size: 2rem;
         line-height: 2rem;
@@ -44,7 +44,9 @@
     }
 
     &--play:hover,
-    &--stop:hover {
+    &--stop:hover,
+    &--converter:hover
+     {
         //background-color: rgb(61, 60, 60);
         background-color: rgb(61, 60, 60);
     }
