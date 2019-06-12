@@ -1,17 +1,13 @@
-// ELEMENTS
+// DOM ELEMENTS
 const input = document.getElementById('input');
 const output = document.getElementById('output');
 const convertBtn = document.getElementById('convert');
+const playBtn = document.getElementById('play');
+const stopBtn = document.getElementById('stop');
 const charactersValue = document.getElementById('char-value');
 
 
-const maxCount = 60;
-
-/* const readValue = (e) => {
-    const currentValue = e.target.value;
-
-    charactersCount(currentValue.length);
-} */
+const maxCount = 60; // max count for input
 
 const charactersCount = (e) => {
   const currentValue = e.target.value.length; 
@@ -24,19 +20,6 @@ const charactersCount = (e) => {
     }
 
 }
-
-
-/* const charactersCount = (value) => {
-
-    charactersValue.innerText = maxCount - value;
-
-    if(maxCount - value === 0) {
-        charactersValue.classList.add('limit');
-    } else {
-        charactersValue.classList.remove('limit');
-    }
-
-} */
 
 // Restricts input for the given textbox to the given inputFilter => Only English letters and numerals.
 const setInputFilter = (textbox, inputFilter) => {
@@ -106,7 +89,7 @@ const convert = (e) => {
 
   let convertedWords = words.map(word => { //temp arr of translated words
     return word.split('').map(letter => {
-      const getKey = (obj,val) => Object.keys(obj).find(key => obj[key] === val); // read obj key by value
+      const getKey = (obj,val) => Object.keys(obj).find(key => obj[key] === val); // find obj key by value
       return getKey(morseCode, letter);
     });
   });
@@ -114,17 +97,81 @@ const convert = (e) => {
   const code = convertedWords.map(word => word.join(' ')).join('   '); // 1 space for letters, 3 for words
   
   output.innerText = code;
-
 }
 
+/* SOUND */
 
+let contextPublic; // exposed contex for global scope
 
+const playSound = (e) => {
+
+  let ctx;
+
+  try {
+    // Fix up for prefixing
+    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+    ctx = new AudioContext();
+  }
+  catch(e) {
+    alert('Web Audio API is not supported in this browser');
+  }
+
+  const dot = 1.2 / 15;
+
+  e.preventDefault();
+  let time = ctx.currentTime;
+  let oscillator = ctx.createOscillator();
+  oscillator.type = "sine";
+  oscillator.frequency.value = 600;
+
+  const gainNode = ctx.createGain();
+  gainNode.gain.setValueAtTime(0, time);
+
+  output.value.split('').forEach(letter => {
+    switch(letter) {
+      case ".":
+        gainNode.gain.setValueAtTime(1, time);
+        time += dot;
+        gainNode.gain.setValueAtTime(0, time);
+        time += dot;
+        break;
+      case "-":
+        gainNode.gain.setValueAtTime(1, time);
+        time += 3 * dot;
+        gainNode.gain.setValueAtTime(0, time);
+        time += dot;
+        break;
+      case " ":
+        time += 3 * dot;
+        break;
+      case "   ":
+        time += 7 * dot;
+        break; 
+    }
+  });
+
+  oscillator.connect(gainNode);
+  gainNode.connect(ctx.destination);
+  oscillator.start();
+
+  contextPublic = ctx;
+
+  return false;
+}
+
+const stopSound = (e) => {
+  e.preventDefault();
+
+  contextPublic.close();
+}
 
 /* EVENTS */
 input.addEventListener('keydown', charactersCount);
 window.addEventListener('load', () => {
-    input.value = "";
-    input.setAttribute('maxlength', maxCount.toString());
-    charactersValue.innerText = maxCount;
+  input.value = "";
+  input.setAttribute('maxlength', maxCount.toString());
+  charactersValue.innerText = maxCount;
 });
 convertBtn.addEventListener('click', convert);
+playBtn.addEventListener('click', playSound);
+stopBtn.addEventListener('click', stopSound);
