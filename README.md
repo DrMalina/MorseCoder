@@ -4,10 +4,9 @@ A simple website focused on a Morse Code.
 The main idea was to create some kind of converter, that translates English words to the encrypted ones.
 For that I used **Web Audio API** and played with it for a bit untill the results were satisfying. 
 
-The biggest challange I had was to restrict input options and create an error-free array of words 
-while maintaining the correct whitespaces ratio. The ratio is fundamental when it comes to Morse Code
-- I couldn't eliminate them all with regex, on the other hand I had to check if there are multiply spaces
-in a row :
+The biggest challenge I had was to restrict input options and create an error-free array of words 
+while maintaining the correct whitespaces ratio. The ratio is fundamental when it comes to Morse Code-I couldn't eliminate them all with regex, on the other hand I had to check if there are multiply spaces
+in a row:
 
 ```javascript
 const textToChange = input.value; // read input value
@@ -28,8 +27,7 @@ It seems to be working now without some major issues, however I still recommend 
 RWD principles are implemented.
 
 ### Known bugs :
-* In safari / firefox when hitting 'stop' button during the audio and trying to play it again, causes audio context to gets stuck 
-- you need to click 'stop' 2 times instead of 1. The reason for it might be the different audio context state after clicking 'stop' in chrome and 
+* In safari / firefox when hitting 'stop' button during the audio and trying to play it again, causes audio context to gets stuck-you need to click 'stop' 2 times instead of 1. The reason for it might be the different audio context state after clicking 'stop' in chrome and 
 safari / firefox. 
 
 
