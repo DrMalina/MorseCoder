@@ -2,15 +2,6 @@
     display: flex;
     flex-direction: column;
 
-    /* grid-column: start / end; */
-
-
-    &__heading {
-        /* font-size: 4rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem; */
-    }
-
     &__content {
         margin-left: 3rem;
         margin-right: 3rem;
@@ -61,6 +52,7 @@
             figcaption {
                 position: absolute;
                 top: -6rem;
+                left: 0;
                 z-index: 99;
                 font-size: 1.8rem;
             }

@@ -153,8 +153,9 @@ const playSound = (e) => {
   oscillator.connect(gainNode);
   gainNode.connect(ctx.destination);
   oscillator.start();
-
   contextPublic = ctx;
+
+  console.log(contextPublic);
 
   return false;
 }
@@ -162,7 +163,18 @@ const playSound = (e) => {
 const stopSound = (e) => {
   e.preventDefault();
 
-  contextPublic.close();
+  if(typeof contextPublic !== 'undefined') {
+    contextPublic.close().then( () => console.log(contextPublic));
+  }
+  
+}
+
+const checkIfSoundPlaying = () => {  //to avoid many sounds playing at once
+  if(typeof contextPublic !== 'undefined' && contextPublic.state === 'suspended' || contextPublic.state === 'running') {
+    playBtn.disabled = true;
+  } else {
+    playBtn.disabled = false;
+  }
 }
 
 /* EVENTS */
@@ -175,3 +187,10 @@ window.addEventListener('load', () => {
 convertBtn.addEventListener('click', convert);
 playBtn.addEventListener('click', playSound);
 stopBtn.addEventListener('click', stopSound);
+
+//convertBtn.addEventListener('click', checkIfSoundPlaying);
+playBtn.addEventListener('click', checkIfSoundPlaying);
+stopBtn.addEventListener('click', checkIfSoundPlaying);
+
+
+

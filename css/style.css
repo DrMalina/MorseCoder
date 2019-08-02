@@ -7,7 +7,8 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -21,9 +22,7 @@ body {
 
 .wrapper {
   padding-left: 3rem;
-  padding-right: 3rem;
-  /* padding-left: .5rem;
-    padding-right: .5rem; */ }
+  padding-right: 3rem; }
 
 .main {
   grid-column: start / end; }
@@ -34,12 +33,9 @@ body {
 .nav {
   grid-column: 1 / -1;
   background-color: white;
-  /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
   display: grid;
   grid-template-columns: auto repeat(2, minmax(min-content, 60rem)) auto;
-  font-size: 1rem;
+  font-size: 1.8rem;
   align-content: center;
   align-items: center; }
   .nav__list {
@@ -47,18 +43,17 @@ body {
     display: flex;
     grid-column: 3 / 4;
     justify-self: end;
-    padding-right: 1rem; }
+    padding-right: 2.5rem; }
   .nav__item a {
     color: black;
     text-decoration: none;
-    margin-left: 2rem;
-    /*  */ }
+    margin-right: 2rem;
+    margin-left: 2rem; }
 
 .logo {
   height: 5rem;
-  /*  */
-  grid-column: 2 / 3;
-  padding-left: 1rem; }
+  margin-left: 2rem;
+  grid-column: 2 / 3; }
 
 .header {
   background-color: black;
@@ -67,16 +62,14 @@ body {
   justify-items: center;
   align-content: center;
   grid-column: 1 / -1;
-  font-size: 4rem; }
+  font-size: 6rem; }
+  .header a {
+    color: #fff;
+    text-decoration: none; }
 
 .about {
   display: flex;
-  flex-direction: column;
-  /* grid-column: start / end; */ }
-  .about__heading {
-    /* font-size: 4rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem; */ }
+  flex-direction: column; }
   .about__content {
     margin-left: 3rem;
     margin-right: 3rem; }
@@ -110,6 +103,7 @@ body {
       .about__fig--video figcaption {
         position: absolute;
         top: -6rem;
+        left: 0;
         z-index: 99;
         font-size: 1.8rem; }
 
@@ -125,8 +119,7 @@ body {
     font-weight: 400;
     text-align: center;
     margin-bottom: 3rem;
-    list-style-position: inside;
-    /*  font-size: 1rem; */ }
+    list-style-position: inside; }
   .alphabet__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -140,10 +133,7 @@ body {
       font-size: 1.6rem;
       padding-left: 3rem;
       padding-right: 3rem;
-      font-weight: 700;
-      /*  font-size: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem; */ }
+      font-weight: 700; }
       .alphabet__list > li span {
         font-size: 2em;
         margin-left: 2rem;
@@ -238,3 +228,77 @@ body {
     margin-right: .8rem; }
   .btn--play:hover, .btn--stop:hover, .btn--converter:hover {
     background-color: #3d3c3c; }
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem; }
+  .header {
+    font-size: 4rem; }
+  .btn--header {
+    font-size: .42em;
+    border: .3rem solid white; }
+  .heading-3 {
+    font-size: 3rem; }
+  .about__fig--video figcaption {
+    font-size: 1.6rem; } }
+
+@media only screen and (max-width: 562px) {
+  .container {
+    grid-template-rows: 10rem calc(100vh - 10rem); }
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .nav__list {
+      grid-column: 1/-1;
+      width: 80%;
+      justify-self: center;
+      padding-right: 0;
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between; }
+    .nav .logo {
+      grid-column: 1/-1;
+      justify-self: center;
+      margin-left: 0; }
+  .about .heading-4 {
+    font-size: 1.8rem; }
+  .about__content p {
+    font-size: 1.4rem; }
+  .alphabet__info {
+    font-size: 1.4rem; }
+  .converter__buttons {
+    display: flex;
+    justify-content: space-between; }
+    .converter__buttons .btn--converter, .converter__buttons .btn--play, .converter__buttons .btn--stop {
+      padding: 2rem 4rem;
+      flex: 1;
+      font-size: 1.4rem;
+      line-height: 1.4rem; }
+  .wrapper {
+    padding-left: .5rem;
+    padding-right: .5rem; } }
+
+@media only screen and (max-width: 500px) {
+  .alphabet__list {
+    margin: .5rem auto; }
+    .alphabet__list > li {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-weight: 700; } }
+
+@media only screen and (max-width: 400px) {
+  .nav {
+    font-size: 1.4rem; }
+  .header {
+    font-size: 3rem; }
+  .converter .btn--converter, .converter .btn--play, .converter .btn--stop {
+    padding: 2rem 2rem;
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.4rem; }
+  .about__fig--video figcaption {
+    top: -9rem; } }

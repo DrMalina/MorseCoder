@@ -1,0 +1,147 @@
+@media only screen and (max-width: 600px) {
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        font-size: 1.8rem;
+    }
+
+    .header {
+        font-size: 4rem;
+    }
+
+    .btn {
+
+        &--header {
+            font-size: .42em;
+            border: .3rem solid white;
+        }
+    }
+
+    .heading-3 {
+        font-size: 3rem;
+    }
+
+    .about__fig--video figcaption {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 562px) {
+    .container {
+        grid-template-rows: 10rem calc(100vh - 10rem);
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &__list {
+            grid-column: 1/-1;
+            width: 80%;
+            justify-self: center;
+            padding-right: 0;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            grid-column: 1/-1;
+            justify-self: center;
+            margin-left: 0;
+        }
+    }
+
+    .about {
+        .heading-4 {
+            font-size: 1.8rem;
+        }
+
+        &__content {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+
+    .alphabet {
+        &__info {
+            font-size: 1.4rem;
+        }
+    }
+
+    .converter {
+        &__buttons {
+
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                &--converter,
+                &--play,
+                &--stop {
+                    padding: 2rem 4rem;
+                    flex: 1;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                    
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    .alphabet {
+
+        &__list {
+            margin: .5rem auto;
+
+            & > li {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 400px) { 
+    .nav {
+        font-size: 1.4rem;
+    }
+
+    .header {
+        font-size: 3rem;
+    }
+
+    .converter {
+        .btn {
+            &--converter,
+            &--play,
+            &--stop {
+                padding: 2rem 2rem;
+                flex: 1;
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+            }
+        }   
+        
+    }
+
+    .about__fig--video figcaption {
+        top: -9rem;
+    }
+}

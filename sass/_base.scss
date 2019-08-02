@@ -13,6 +13,7 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,14 +31,10 @@ body {
 .wrapper {
     padding-left: 3rem;
     padding-right: 3rem;
-    //
-    /* padding-left: .5rem;
-    padding-right: .5rem; */
 }
 
 .main {
     grid-column: start / end;
-    //display: none; //!
 }
 
 .limit {
